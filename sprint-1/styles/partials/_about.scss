@@ -1,0 +1,14 @@
+.about{
+    padding: 2rem 0 2.5rem 0;
+
+    &__content{
+        display: flex;
+        flex-flow: column;
+    }
+
+    &__header{
+        font-size: 1.5rem;
+        line-height: 2rem;
+        margin-bottom: 1.5rem;
+    }
+}

@@ -182,6 +182,26 @@
   }
 }
 
+.about {
+  padding: 2rem 0 2.5rem 0;
+}
+
+.about__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+.about__header {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-bottom: 1.5rem;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -196,5 +216,9 @@ li {
 
 a {
   text-decoration: none;
+}
+
+img {
+  width: 100%;
 }
 /*# sourceMappingURL=main.css.map */

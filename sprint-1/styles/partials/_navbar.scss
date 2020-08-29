@@ -2,7 +2,6 @@
     height: 80px;
     background-color: $color-black;
     display: flex;
-    // align-items: center;
     justify-content: center;
 
     &__navbar{
@@ -28,11 +27,35 @@
 
     &__navbar-menu{
         display: flex;
-        width: 100%;
-        list-style: none;
+        width: 100vw;
+        flex-grow: 1;
+
+        @include tablet{
+            height: 100%;
+        }
+    }
+
+    &__navbar-menu-item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+
+        @include tablet{
+            max-width: 80px;
+            margin-left: 56px;
+        }
+
+        &--active{
+            border-bottom: 4px solid $color-white;
+        }
     }
 
     &__navbar-menu-link{
         color: $color-silver;
+
+        &--active{
+            color: $color-white;
+        }
     }
 }

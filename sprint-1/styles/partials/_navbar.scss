@@ -1,0 +1,38 @@
+.header{
+    height: 80px;
+    background-color: $color-black;
+    display: flex;
+    // align-items: center;
+    justify-content: center;
+
+    &__navbar{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        @include tablet{
+            flex-direction: row;
+        }
+    }
+
+    &__navbar-logo{
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+
+        & img{
+            width: 7.5rem;
+            height: 1.5rem;
+        }
+    }
+
+    &__navbar-menu{
+        display: flex;
+        width: 100%;
+        list-style: none;
+    }
+
+    &__navbar-menu-link{
+        color: $color-silver;
+    }
+}

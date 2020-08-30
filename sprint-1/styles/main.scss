@@ -6,6 +6,7 @@
 @import './partials/hero';
 @import './partials/about';
 @import './partials/gallery';
+@import './partials/footer';
 
 *{
     box-sizing: border-box;
@@ -55,4 +56,21 @@ p{
         font-size: 0.875rem;
         line-height: 1.375rem;
     }
+}
+
+h4{
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+    color: $color-silver;
+
+    @include tablet{
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+    }
+}
+
+h5{
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    color: $color-silver;
 }

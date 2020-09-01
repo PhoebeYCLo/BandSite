@@ -1,0 +1,61 @@
+.header{
+    height: 80px;
+    background-color: $color-black;
+    display: flex;
+    justify-content: center;
+
+    &__navbar{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        @include tablet{
+            flex-direction: row;
+        }
+    }
+
+    &__navbar-logo{
+        display: flex;
+        align-items: center;
+        flex-grow: 1;
+
+        & img{
+            width: 7.5rem;
+            height: 1.5rem;
+        }
+    }
+
+    &__navbar-menu{
+        display: flex;
+        width: 100vw;
+        flex-grow: 1;
+
+        @include tablet{
+            height: 100%;
+        }
+    }
+
+    &__navbar-menu-item{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-grow: 1;
+
+        @include tablet{
+            max-width: 80px;
+            margin-left: 56px;
+        }
+
+        &--active{
+            border-bottom: 4px solid $color-white;
+        }
+    }
+
+    &__navbar-menu-link{
+        color: $color-silver;
+
+        &--active{
+            color: $color-white;
+        }
+    }
+}

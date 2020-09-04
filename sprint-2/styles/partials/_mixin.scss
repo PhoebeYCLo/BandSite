@@ -1,0 +1,13 @@
+@mixin buttonStyle {
+    height: 3rem;
+    text-transform: uppercase;
+    color: $color-white;
+    background-color: $color-black;
+    border: none;
+    border-radius: $border-radius-default;
+
+    &:hover{
+        background-color: black;
+        cursor: pointer;
+    }
+}

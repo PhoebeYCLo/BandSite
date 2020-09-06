@@ -138,28 +138,79 @@
 }
 
 .hero {
-  height: 52vw;
-  min-height: 183px;
-  max-height: 670px;
   width: 100%;
-  background-color: rgba(50, 50, 50, 0.5);
-  background-image: url("../assets/Images/Hero.jpg");
-  background-position: center;
   background-blend-mode: overlay;
   background-repeat: no-repeat;
+  background-position: center;
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
+.hero__backgroundImage {
+  background-color: rgba(50, 50, 50, 0.5);
+}
+
+.hero__backgroundImage-about {
+  height: 52vw;
+  min-height: 183px;
+  max-height: 670px;
+  background-image: url("../assets/Images/Hero.jpg");
+}
+
+.hero__backgroundImage-shows {
+  height: 52vw;
+  min-height: 472px;
+  max-height: 670px;
+  background-image: url("../assets/Images/ShowHero.jpg");
+}
+
 .hero__content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+  }
+}
+
+.hero__content-shows {
+  -webkit-box-align: initial;
+      -ms-flex-align: initial;
+          align-items: initial;
+  margin-top: 4rem;
+}
+
+@media screen and (min-width: 768px) {
+  .hero__content-shows {
+    margin-top: 6rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__content-shows {
+    margin-top: 10rem;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__header-shows {
+    margin-right: 4rem;
+  }
 }
 
 .hero__header-title {
@@ -180,6 +231,18 @@
     font-size: 3.75rem;
     line-height: 4.25rem;
   }
+}
+
+.hero__header-title-shows {
+  font-size: 2.8rem;
+  line-height: 4.25rem;
+  color: #FFFFFF;
+}
+
+.hero__header-subtitle {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: #AFAFAF;
 }
 
 .about {

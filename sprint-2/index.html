@@ -15,10 +15,10 @@
             </a>
             <ul class="header__navbar-menu">
                 <li class="header__navbar-menu-item header__navbar-menu-item--active">
-                    <a href="#" class="header__navbar-menu-link header__navbar-menu-link--active">Biography</a>
+                    <a href="./index.html" class="header__navbar-menu-link header__navbar-menu-link--active">Biography</a>
                 </li>
                 <li class="header__navbar-menu-item">
-                    <a href="#" class="header__navbar-menu-link">Shows</a>
+                    <a href="./pages/shows.html" class="header__navbar-menu-link">Shows</a>
                 </li>
             </ul>
         </nav>
@@ -26,7 +26,7 @@
 
     <main>
         <!-- HERO SECTION -->
-        <section class="hero">
+        <section class="hero hero__backgroundImage-about">
             <div class="hero__content container">
                 <div class="hero__header">
                     <h2 class="hero__header-title">
@@ -119,11 +119,11 @@
                             <img src="./assets/Images/Mohan-muruge.jpg" alt="User avatar">
                         </div>
                         <div class="comment__input-container">
-                            <form class="comment__form" action="">
+                            <form class="comment__form" action="" id="newCommentForm">
                                 <label for="userName">NAME</label>
-                                <input type="text" name="userName" class="comment__form-name" placeholder="Enter your name">
+                                <input type="text" name="userName" class="comment__form-name" placeholder="Enter your name" id="commentAuthor">
                                 <label for="userComment">COMMENT</label>
-                                <textarea class="comment__message-container" name="userComment" placeholder="Add a new comment"></textarea>
+                                <textarea class="comment__message-container" name="userComment" placeholder="Add a new comment" id="commentContent"></textarea>
                                 <button type="submit" id="btnSumbit" class="comment__submit-btn">comment</button>
                             </form>
                         </div>

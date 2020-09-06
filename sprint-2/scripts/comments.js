@@ -80,7 +80,7 @@ let fetchComment = () => {
     }
 };
 
-// load & display existing comments
+// load(fetch) & display existing comments
 let displayComments = () =>{
     commentArray.forEach(() => {
         commentStructure();
@@ -89,3 +89,37 @@ let displayComments = () =>{
 };
 
 displayComments();
+
+// submit, add new comment to commentArrat & display comment 
+let submitButton = document.querySelector('#btnSumbit');
+submitButton.addEventListener('click', () => {
+    const newCommentForm =  document.querySelector('#newCommentForm');
+
+    newCommentForm.onsubmit = (e) => {
+        e.preventDefault();
+        // reset the values of all elements in the comment form
+        newCommentForm.reset();
+    };
+
+    const author = document.querySelector('#commentAuthor').value;
+    const message = document.querySelector('#commentContent').value;
+
+    // add new comment to the beginning of commentArray
+    commentArray.unshift({
+        'author': author,
+        'date': getDate(),
+        'content': message
+    });
+    commentStructure();
+    fetchComment();
+});
+
+// get current date
+let getDate = () => {
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0');
+    var yyyy = today.getFullYear();
+
+    return today = mm + '/' + dd + '/' + yyyy;
+};

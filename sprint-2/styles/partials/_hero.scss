@@ -1,35 +1,87 @@
 .hero{
-    height: 52vw;
-    min-height: 183px;
-    max-height: 670px;
     width: 100%;
-    background-color: rgba(50, 50, 50, 0.5);
-    background-image: url('../assets/Images/Hero.jpg');
-    background-position: center;
     background-blend-mode: overlay;
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
     display: flex;
+
+    &__backgroundImage{
+        background-color: rgba(50, 50, 50, 0.5);
+
+        &-about{
+            height: 52vw;
+            min-height: 183px;
+            max-height: 670px;
+            background-image: url('../assets/Images/Hero.jpg');
+            
+        }
+
+        &-shows{
+            height: 52vw;
+            min-height: 472px;
+            max-height: 670px;
+            background-image: url('../assets/Images/ShowHero.jpg');
+        }
+    }
 
 
     &__content{
         display: flex;
+        flex-flow: column;
         align-items: center;
-    }
-
-    &__header-title{
-        font-size: 1.5rem;
-        line-height: 2rem;
-        color: $color-white;
-
-        @include tablet{
-            font-size: 2.25rem;
-            line-height: 2.75rem;
-        }
 
         @include desktop{
-            font-size: 3.75rem;
+            flex-flow: row;
+        }
+
+        &-shows{
+            align-items: initial;
+            margin-top: 4rem;
+
+            @include tablet{
+                margin-top: 6rem;
+            }
+
+            @include desktop{
+                margin-top: 10rem;
+            }
+        }
+    }
+
+    &__header{
+        &-shows{
+            @include desktop{
+                margin-right: 4rem;
+            }
+        }
+
+        &-title{
+            font-size: 1.5rem;
+            line-height: 2rem;
+            color: $color-white;
+
+            @include tablet{
+                font-size: 2.25rem;
+                line-height: 2.75rem;
+            }
+
+            @include desktop{
+                font-size: 3.75rem;
+                line-height: 4.25rem;
+            }
+        }
+
+        &-title-shows{
+            font-size: 2.8rem;
             line-height: 4.25rem;
+            color: $color-white;
+        }
+
+        &-subtitle{
+            font-size: 1rem;
+            line-height: 1.5rem;
+            color: $color-silver;
         }
     }
 }

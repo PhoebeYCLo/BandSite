@@ -856,6 +856,140 @@
   margin-top: initial;
 }
 
+.shows {
+  padding: 2rem 0;
+}
+
+.shows__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+@media screen and (min-width: 1200px) {
+  .shows__content {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row;
+            flex-flow: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.shows__header {
+  margin-bottom: 2.5rem;
+}
+
+.shows-list {
+  width: 100%;
+}
+
+@media screen and (min-width: 1200px) {
+  .shows-list {
+    max-width: 50.25rem;
+  }
+}
+
+.shows__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+}
+
+.shows__row--divider {
+  border-bottom: 1px solid #E1E1E1;
+}
+
+.shows__row-subtitle {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .shows__row-subtitle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+  }
+}
+
+.shows__info {
+  margin-top: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .shows__info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+}
+
+.shows__container {
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 768px) {
+  .shows__container {
+    width: 25%;
+  }
+}
+
+.shows__subtitle {
+  color: #AFAFAF;
+  text-transform: uppercase;
+}
+
+@media screen and (min-width: 768px) {
+  .shows__subtitle--info {
+    display: none;
+  }
+}
+
+.shows__date {
+  font-weight: 600;
+}
+
+.shows__venue, .shows__location {
+  font-size: 0.9375rem;
+}
+
+.shows__buy-btn {
+  height: 3rem;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background-color: #323232;
+  border: none;
+  border-radius: 4px;
+  width: 100%;
+  margin: 0.5rem 0 1rem 0;
+}
+
+.shows__buy-btn:hover {
+  background-color: black;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 768px) {
+  .shows__buy-btn {
+    width: 160px;
+    margin-left: auto;
+  }
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;

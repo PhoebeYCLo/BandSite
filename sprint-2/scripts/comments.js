@@ -70,6 +70,22 @@ let commentStructure = () => {
 // fetch comment info from commentArray
 let fetchComment = () => {
     for(let i = 0; i < commentArray.length; i++){
-        
+        const commentAuthor = document.querySelectorAll('.comment__author');
+        const commentDate = document.querySelectorAll('.comment__date');
+        const commentContent = document.querySelectorAll('.comment__message-content');
+
+        commentAuthor[i].innerText = commentArray[i].author;
+        commentDate[i].innerText = commentArray[i].date;
+        commentContent[i].innerText = commentArray[i].content;
     }
 };
+
+// load & display existing comments
+let displayComments = () =>{
+    commentArray.forEach(() => {
+        commentStructure();
+    });
+    fetchComment();
+};
+
+displayComments();

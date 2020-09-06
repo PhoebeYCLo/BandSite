@@ -27,10 +27,6 @@
         display: flex;
         flex-flow: column;   
 
-        // @include tablet{
-        //     flex-flow: row;
-        // }
-
         &--divider{
             border-bottom: 1px solid $color-mercury;
         }

@@ -28,7 +28,6 @@
 
     &__content{
         display: flex;
-        // flex-flow: column;
         align-items: center;
 
         @include desktop{

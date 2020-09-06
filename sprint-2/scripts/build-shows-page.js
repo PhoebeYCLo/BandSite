@@ -1,19 +1,3 @@
-/* <div class="shows__info shows__row--divider">
-        <div class="shows__container shows__container-date">
-            <div class="shows__subtitle shows__subtitle--info">Date</div>
-            <div class="shows__date">Mon Dec 17 2018</div>
-        </div>
-        <div class="shows__container shows__container-venue">
-            <div class="shows__subtitle shows__subtitle--info">venue</div>
-            <div class="shows__venue">Ronald Lane</div>
-        </div>
-        <div class="shows__container shows__container-location">
-            <div class="shows__subtitle shows__subtitle--info">location</div>
-            <div class="shows__location">location</div>
-        </div>
-        <button class="shows__buy-btn">buy ticket</button>
-    </div> */
-    
 // array contain shows information
 let showsArray =[
     {
@@ -70,7 +54,6 @@ let showsStructure = () => {
     const showsLocation = document.createElement('div');
     const showsbtn = document.createElement('button');
 
-    // showsList.appendChild(showsDivider).classList.add('shows__row--divider');
 
     showsList.appendChild(showsInfo).classList.add('shows__info', 'shows__row--divider');
 

@@ -11,3 +11,13 @@
         cursor: pointer;
     }
 }
+
+@mixin showsTitle {
+    color: $color-silver;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+
+    @include tablet{
+        display: none;
+    }
+}

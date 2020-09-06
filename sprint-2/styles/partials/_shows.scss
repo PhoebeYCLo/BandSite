@@ -56,8 +56,19 @@
 
     &__container{
         margin-bottom: 1.5rem;
+
         @include tablet{
             width: 25%;
+            display: flex;
+        }
+
+        &--venue,
+        &--location{
+            @include tablet{
+                margin-bottom: 1rem;
+                width: 25%;
+                display: flex;
+            }
         }
     }
 
@@ -69,6 +80,12 @@
             @include tablet{
                 display: none;
             }
+        }
+
+        &--date,
+        &--venue,
+        &--location{
+            @include showsTitle;
         }
     }
 

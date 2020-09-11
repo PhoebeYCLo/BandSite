@@ -1,0 +1,93 @@
+.footer{
+    color: $color-white;
+    background-color: $color-black;
+    padding: 3rem 0;
+
+    h1, 
+    h2{
+        color: $color-white;
+    }
+
+    &__media-info,
+    &__contact,
+    &__copyright-container{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+
+        @include tablet{
+            flex-direction: row;
+        }
+    }
+
+    &__media{
+    
+        &-info{
+        margin-bottom: 3.5rem;
+        }
+        
+        &-container{
+            display: flex;
+        }
+        
+        &-icon{
+            width: initial;
+            margin-right: 32px;
+        }
+    }
+    
+    &__header{
+        margin-bottom: 2rem;
+
+        @include tablet{
+            width: 33.3%;
+            margin-bottom: 0;
+        }
+
+        @include desktop{
+            width: 25%;
+        }
+    }
+
+    
+
+    &__logo{
+        display: none;
+
+        @include tablet{
+            display: block;
+            width: 120px;
+            height: 24px;
+        }
+
+        &-container{
+            display: flex;
+            align-items: center;
+            margin-left: auto;
+        }
+    }
+
+    &__contact{
+        justify-content: space-between;
+
+        &-name,
+        &-location,
+        &-email{
+            margin-bottom: 1.5rem;
+        }
+
+        &-name{
+            @include tablet{
+                font-size: 1.3rem;
+            }
+
+            @include desktop{
+                font-size: 1.5rem;
+            } 
+        }
+
+        &--col-container{
+            width: 33.3%;
+        }
+    }
+}

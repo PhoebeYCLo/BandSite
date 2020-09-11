@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BandSite</title>
+    <link rel="stylesheet" href="./styles/main.css">
+</head>
+<body>
+    <!-- HEADER NAVIGMATION -->
+    <header class="header">
+        <nav class="header__navbar container">
+            <a href="index.html" class="header__navbar-logo">
+                <img src="./assets/Logo/Logo-bandsite.svg" alt="BandSite Logo">
+            </a>
+            <ul class="header__navbar-menu">
+                <li class="header__navbar-menu-item header__navbar-menu-item--active">
+                    <a href="./index.html" class="header__navbar-menu-link header__navbar-menu-link--active">Biography</a>
+                </li>
+                <li class="header__navbar-menu-item">
+                    <a href="./pages/shows.html" class="header__navbar-menu-link">Shows</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero hero__backgroundImage-about">
+            <div class="hero__content container">
+                <div class="hero__header">
+                    <h2 class="hero__header-title">
+                        Gaspard Auge &amp;<br>
+                        Xavier de Rosnay
+                    </h2>
+                </div>
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section class="about">
+            <div class="about__content container">
+                <h2 class="about__header">About The Musicians</h2>
+
+                <div class="about__container">
+                    <div class="about__image-container">
+                        <img src="./assets/Images/About.jpg" alt="Performer on stage" class="about__image">
+                    </div>
+
+                    <blockquote class="about__quote">
+                        <p>We are more comfortable with not fighting what comes
+                            naturally. Before we might have thought, ‘We need to be
+                            smarter than this’
+                        </p>
+                        <footer>Xavier de Rosnay</footer>
+                    </blockquote>
+
+                    <h2 class="about__subhead">Xavier de Rosnay & Gaspard Augé</h2>
+                    <div class="about__info">
+                        <p class="about__info--col-container">
+                            Xavier De Ronsay and Gaspard Augé had a few
+                            mutual friends, who happened to run a record label,
+                            seeking tracks for a compilation. With an immediate
+                            connection, the pair decided to try their hand at
+                            making a song. That’s when they created their
+                            breakout single, We Are Your Friends – a feel-good,
+                            funk-filled, instant anthem that lost the remix
+                            contest, but won the attention of Pedro Winter,
+                            director of the newly founded Ed Banger Records,
+                            who boasted Daft Punk as former clients. One week
+                            later, they were in his office, signing a record deal.
+                        </p>
+
+                        <p class="about__info--col-container">
+                            Xavier De Ronsay and Gaspard Augé had a few
+                            mutual friends, who happened to run a record label,
+                            seeking tracks for a compilation. With an immediate
+                            connection, the pair decided to try their hand at
+                            making a song. That’s when they created their
+                            breakout single, We Are Your Friends – a feel-good,
+                            funk-filled, instant anthem that lost the remix
+                            contest, but won the attention of Pedro Winter,
+                            director of the newly founded Ed Banger Records,
+                            who boasted Daft Punk as former clients. One week
+                            later, they were in his office, signing a record deal.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALLERY SECTION -->
+        <section class="gallery">
+            <div class="gallery__content container">
+                <h2 class="gallery__header">Photo Gallery</h2>
+
+                <div class="gallery__image-container">
+                    <img src="./assets/Images/Photo-gallery-1.jpg" alt="Live concert crowd" class="gallery__image">
+                    <img src="./assets/Images/Photo-gallery-2.jpg" alt="Live concert crowd" class="gallery__image">
+                    <img src="./assets/Images/Photo-gallery-3.jpg" alt="Live concert crowd" class="gallery__image">
+                    <img src="./assets/Images/Photo-gallery-4.jpg" alt="Live concert crowd" class="gallery__image">
+                    <img src="./assets/Images/Photo-gallery-5.jpg" alt="Live concert crowd" class="gallery__image">
+                    <img src="./assets/Images/Photo-gallery-6.jpg" alt="Live concert crowd" class="gallery__image">
+                    <img src="./assets/Images/Photo-gallery-7.jpg" alt="Live concert crowd" class="gallery__image">
+                    <img src="./assets/Images/Photo-gallery-8.jpg" alt="Live concert crowd" class="gallery__image">
+                    <img src="./assets/Images/Photo-gallery-9.jpg" alt="Live concert crowd" class="gallery__image">
+                </div>
+            </div>
+        </section>
+
+        <!-- COMMENT SECTION -->
+        <section class="comments">
+            <div class="comments__content container">
+                <h2 class="comments__header">Join the Conversation</h2>
+
+                <div class="comments__comment-container">
+                    <div class="comment__message-content-container">
+                        <div class="comment__avatar">
+                            <img src="./assets/Images/Mohan-muruge.jpg" alt="User avatar">
+                        </div>
+                        <div class="comment__input-container">
+                            <form class="comment__form" action="" id="newCommentForm">
+                                <label for="userName">NAME</label>
+                                <input type="text" name="userName" class="comment__form-name" placeholder="Enter your name" id="commentAuthor">
+                                <label for="userComment">COMMENT</label>
+                                <textarea class="comment__message-container" name="userComment" placeholder="Add a new comment" id="commentContent"></textarea>
+                                <button type="submit" id="btnSumbit" class="comment__submit-btn">comment</button>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- FETCH COMMENT FORM ARRAYLIST -->                   
+                    <div id="commentList" class="comment-list"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER SECTION -->
+    <footer class="footer">
+        <div class="footer__content container">
+            <div class="footer__media-info">
+                <h2 class="footer__header">Get In Touch</h2>
+                <div class="footer__media-container">
+                    <img src="./assets/Icons/SVG/Icon-facebook.svg" alt="BandSite Facebook" class="footer__media-icon">
+                    <img src="./assets/Icons/SVG/Icon-instagram.svg" alt="BandSite Instagram" class="footer__media-icon">
+                    <img src="./assets/Icons/SVG/Icon-twitter.svg" alt="BandSite Twitter" class="footer__media-icon">
+                </div>
+                <div class="footer__logo-container">
+                    <img src="./assets/Logo/Logo-bandsite.svg" alt="BandSite Logo" class="footer__logo">
+                </div>
+            </div>
+
+            <div class="footer__contact">
+                <div class="footer__contact--col-container">
+                    <h2 class="footer__contact-name">
+                        Richard Rovner<br>
+                        The Bees Knees Management
+                    </h2>
+                    <h4 class="footer__contact-location">
+                        460 King Street West<br>
+                        Toronto, Ontario M5V 1L7
+                    </h4>
+                    <a href="mailto:info@thebeesknees.com">
+                        <h5 class="footer__contact-email">
+                            info@thebeesknees.com
+                        </h5>
+                    </a>
+                </div>
+
+                <div class="footer__contact--col-container">
+                    <h2 class="footer__contact-name">
+                        Marsha Vlasic<br>
+                        Artist Group International 
+                    </h2>
+                    <h4 class="footer__contact-location">
+                        Booking Agent for<br>
+                        US / South America / Japan
+                    </h4>
+                    <a href="mailto:marsha.vlasic@artistgrp.com">
+                        <h5 class="footer__contact-email">
+                            marsha.vlasic@artistgrp.com
+                        </h5>
+                    </a>
+                </div>
+
+                <div class="footer__contact--col-container">
+                    <h2 class="footer__contact-name">
+                        Russel Warby<br>
+                        William Morrir Entertainment 
+                    </h2>
+                    <h4 class="footer__contact-location">
+                        Booking Agent for<br>
+                        UK / EU / AU
+                    </h4>
+                    <a href="mailto:RLW@wmeentertainment">
+                        <h5 class="footer__contact-email">
+                            RLW@wmeentertainment
+                        </h5>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer__copyright-container">
+                <h5 class="footer__copyright">Copyright The Bees Knees © 2018</h5>
+                <h5 class="footer__copyright">All Rights Reserved</h5>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT -->
+    <script src="./scripts/comments.js"></script>
+</body>
+</html>

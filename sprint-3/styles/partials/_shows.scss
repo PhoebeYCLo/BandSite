@@ -1,0 +1,107 @@
+.shows{
+    padding: 2rem 0;
+
+    &__content{
+        display: flex;
+        flex-flow: column;
+
+        @include desktop{
+            flex-flow: row;
+            justify-content: space-between;
+        }
+    }
+
+    &__header{
+        margin-bottom: 2.5rem;
+    }
+
+    &-list{
+        width: 100%;
+        
+        @include desktop{
+            max-width: 50.25rem;
+        }
+    }
+
+    &__row{
+        display: flex;
+        flex-flow: column;   
+
+        &--divider{
+            border-bottom: 1px solid $color-mercury;
+        }
+    }
+
+    &__row-subtitle{
+        display: none;
+
+        @include tablet{
+            display: flex;
+            width: 100%;
+        }
+    }
+
+    &__info{
+        margin-top: 1rem;
+
+        @include tablet{
+            display: flex;
+            align-items: baseline;
+        }
+    }
+
+    &__container{
+        margin-bottom: 1.5rem;
+
+        @include tablet{
+            width: 25%;
+            display: flex;
+        }
+
+        &--venue,
+        &--location{
+            @include tablet{
+                margin-bottom: 1rem;
+                width: 25%;
+                display: flex;
+            }
+        }
+    }
+
+    &__subtitle{
+        color: $color-silver;
+        text-transform: uppercase;
+
+        &--info{
+            @include tablet{
+                display: none;
+            }
+        }
+
+        &--date,
+        &--venue,
+        &--location{
+            @include showsTitle;
+        }
+    }
+
+    &__date{
+        font-weight: 600;
+    }
+
+    &__venue,
+    &__location{
+        font-size: 0.9375rem;
+    }
+
+    &__buy-btn{
+        @include buttonStyle;
+        width: 100%;
+        margin: 0.5rem 0 1rem 0;
+
+        @include tablet{
+            width: 160px;
+            margin-left: auto;
+        }
+    }
+}

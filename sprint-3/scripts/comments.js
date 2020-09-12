@@ -1,24 +1,3 @@
-/*<div class="comment__usermessage-container--divider">
-    <div class="comment__usermessage-container">
-        <div class="comment__user-avatar">
-            <img src="https://kansai-resilience-forum.jp/wp-content/uploads/2019/02/IAFOR-Blank-Avatar-Image-1.jpg" alt="User avatar">
-        </div>
-        <div class="comment__input-container"> //commentBody in js
-            <div class="comment__author-container">
-                <div class="comment__author">Micheal Lyons</div>
-                <div class="comment__date">12/18/2018</div>
-            </div>
-            <div class="comment__message-content"> //commentContent in js
-                    They BLEW the ROOF off at their
-                    last show, once everyone started
-                    figuring out they were going. This is
-                    still simply the greatest opening of a
-                    concert I have EVER witnessed.
-            </div>
-        </div>
-    </div>
-</div>*/
-
 // array contain comments that create by user
 let commentArray =[
     {
@@ -91,15 +70,11 @@ let displayComments = () =>{
 displayComments();
 
 // submit, add new comment to commentArrat & display comment 
-let submitButton = document.querySelector('#btnSumbit');
-submitButton.addEventListener('click', () => {
-    const newCommentForm =  document.querySelector('#newCommentForm');
+const newCommentForm =  document.querySelector('#newCommentForm');
 
-    newCommentForm.onsubmit = (e) => {
-        e.preventDefault();
-        // reset the values of all elements in the comment form
-        newCommentForm.reset();
-    };
+newCommentForm.onsubmit = (e) => {
+
+    e.preventDefault();
 
     const author = document.querySelector('#commentAuthor').value;
     const message = document.querySelector('#commentContent').value;
@@ -110,16 +85,20 @@ submitButton.addEventListener('click', () => {
         'date': getDate(),
         'content': message
     });
+    
     commentStructure();
     fetchComment();
-});
+
+    // reset the values of all elements in the comment form
+    newCommentForm.reset();
+};
 
 // get current date
 let getDate = () => {
-    var today = new Date();
-    var dd = String(today.getDate()).padStart(2, '0');
-    var mm = String(today.getMonth() + 1).padStart(2, '0');
-    var yyyy = today.getFullYear();
+    let today = new Date();
+    let dd = String(today.getDate()).padStart(2, '0');
+    let mm = String(today.getMonth() + 1).padStart(2, '0');
+    let yyyy = today.getFullYear();
 
     return today = mm + '/' + dd + '/' + yyyy;
 };

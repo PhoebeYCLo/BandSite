@@ -114,6 +114,7 @@ const getComments = () => {
     .then((response) => {
         // console.log(response);
         response.data.forEach((item) => {
+            // this.response = response.reverse();s
             createComment(item);
         })
     })
@@ -148,8 +149,38 @@ const createComment = (arr) => {
     commentAuthor.innerText = arr.name;
     
     commentAuthorContainer.appendChild(commentDate).classList.add('comment__date');
-    commentDate.innerText = arr.timestamp;
+    commentDate.innerText = postTime(arr.timestamp);
 
     commentBody.appendChild(commentContent).classList.add('comment__message-content');
     commentContent.innerText = arr.comment;
+};
+
+let postTime = (time) => {
+    const date = new Date(time);
+
+    return date.getUTCMonth() + 1 +'/' +
+        date.getUTCDate() + '/' + 
+        date.getUTCFullYear();
+};
+
+const newCommentForm =  document.querySelector('#newCommentForm');
+
+newCommentForm.onsubmit = (e) => {
+
+    e.preventDefault();
+    const author = document.querySelector('#commentAuthor').value;
+    const message = document.querySelector('#commentContent').value;
+
+    if(!author || !message){
+        alert('Please fill your name and comment');
+    } else{
+        return axios.post(`${apiURL}/comments?api_key=${apiKEY}`, {
+            name: author,
+            comment: message
+        })
+        .then(() => {
+            getComments();
+            newCommentForm.reset();
+        })
+    }
 };

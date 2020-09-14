@@ -162,8 +162,13 @@
 .hero__backgroundImage-shows {
   height: 52vw;
   min-height: 472px;
-  max-height: 670px;
   background-image: url("../assets/Images/ShowHero.jpg");
+}
+
+@media screen and (min-width: 1200px) {
+  .hero__backgroundImage-shows {
+    max-height: 670px;
+  }
 }
 
 .hero__content {
@@ -451,7 +456,6 @@
   padding: 3rem 0;
 }
 
-.footer h1,
 .footer h2 {
   color: #FFFFFF;
 }
@@ -485,6 +489,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .footer__media-icon {
@@ -531,30 +538,24 @@
   margin-left: auto;
 }
 
-.footer__contact {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
 .footer__contact-name, .footer__contact-location, .footer__contact-email {
   margin-bottom: 1.5rem;
 }
 
+.footer__contact-name {
+  color: #FFFFFF;
+}
+
 @media screen and (min-width: 768px) {
   .footer__contact-name {
-    font-size: 1.3rem;
+    font-size: 0.875rem;
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .footer__contact-name {
-    font-size: 1.5rem;
+@media screen and (min-width: 768px) {
+  .footer__contact--col-container {
+    width: 25%;
   }
-}
-
-.footer__contact--col-container {
-  width: 33.3%;
 }
 
 .about {

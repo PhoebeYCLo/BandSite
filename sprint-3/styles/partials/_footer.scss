@@ -3,7 +3,6 @@
     background-color: $color-black;
     padding: 3rem 0;
 
-    h1, 
     h2{
         color: $color-white;
     }
@@ -28,6 +27,7 @@
         
         &-container{
             display: flex;
+            align-items: center;
         }
         
         &-icon{
@@ -68,7 +68,7 @@
     }
 
     &__contact{
-        justify-content: space-between;
+        // justify-content: space-between;
 
         &-name,
         &-location,
@@ -77,17 +77,17 @@
         }
 
         &-name{
+            color: $color-white;
+            
             @include tablet{
-                font-size: 1.3rem;
+                font-size: 0.875rem;
             }
-
-            @include desktop{
-                font-size: 1.5rem;
-            } 
         }
 
         &--col-container{
-            width: 33.3%;
+            @include tablet{
+                width: 25%;
+            }
         }
     }
 }

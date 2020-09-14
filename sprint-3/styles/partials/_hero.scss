@@ -20,8 +20,11 @@
         &-shows{
             height: 52vw;
             min-height: 472px;
-            max-height: 670px;
             background-image: url('../assets/Images/ShowHero.jpg');
+            
+            @include desktop{
+                max-height: 670px;
+            }
         }
     }
 
